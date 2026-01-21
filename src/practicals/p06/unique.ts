@@ -1,3 +1,5 @@
+
+
 function getUniqueNumbers(arr1: number[], arr2: number[]): number[] {
   // Write your code below
 }
