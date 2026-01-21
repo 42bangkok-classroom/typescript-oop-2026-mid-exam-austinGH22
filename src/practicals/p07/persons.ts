@@ -14,7 +14,7 @@ const persons: Person[] = [
   { lastName: "NoName", age: 40 }
 ];
 
-function sortPersons(persons: Person[]): Person[] {
+export function sortPersons(persons: Person[]): Person[] {
   const result = persons
   .filter(persons => persons.age>0)
   .map(persons => ({
