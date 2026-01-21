@@ -19,11 +19,7 @@ export function sortPersons(persons: Person[]): Person[] {
     .filter(p => p.age > 0 && p.age < 100)
     .filter(p => p.firstName && p.firstName.trim() !== "")
     .filter(p => p.lastName && p.lastName.trim() !== "")
-    .map(persons => ({firstName: persons.firstName ,lastName: persons.lastName ,age: persons.age}))
     .sort((a, b) => a.age - b.age);
-    
-
-  
 }
 
 console.log(sortPersons(persons))
