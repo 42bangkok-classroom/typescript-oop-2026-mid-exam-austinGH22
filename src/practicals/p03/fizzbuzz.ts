@@ -5,10 +5,8 @@ const inputNumber = Number(consoleInput)
 
 for (let i = 1; i <= inputNumber; i++) {
     if(Number.isNaN(inputNumber)){
-      
     }
     else if (inputNumber < 0 ){
-      
     }
     else{
         if (i % 3 === 0 && i % 5 === 0) {
