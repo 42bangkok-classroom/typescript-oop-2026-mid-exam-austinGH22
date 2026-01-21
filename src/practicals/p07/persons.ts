@@ -1,8 +1,10 @@
+
 interface Person {
   firstName?: string;
   lastName?: string;
   age: number;
 }
+
 
 const persons: Person[] = [
   { firstName: "Somchai", lastName: "Jaidee", age: 30 },
@@ -16,7 +18,7 @@ const persons: Person[] = [
 
 export function sortPersons(persons: Person[]): Person[] {
   const result = persons
-  .filter(persons => persons.age>0)
+  .filter(persons => persons.age>0 && persons.age<100)
   .map(persons => ({
     firstName: persons.firstName ,
     lastName: persons.lastName ,
