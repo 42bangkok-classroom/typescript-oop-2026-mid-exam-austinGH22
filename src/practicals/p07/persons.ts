@@ -17,8 +17,8 @@ const persons: Person[] = [
 export function sortPersons(persons: Person[]): Person[] {
   return persons
     .filter(p => p.age > 0 && p.age < 100)
-    .filter(p => p.firstName && p.firstName.trim() !== "")
-    .filter(p => p.lastName && p.lastName.trim() !== "")
+    .filter(p => p.firstName && p.firstName.trim() !== "" && p.firstName.trim() !== null && p.firstName.trim() !== undefined)
+    .filter(p => p.lastName && p.lastName.trim() !== "" && p.lastName.trim() !== null && p.lastName.trim() !==  undefined )
     .sort((a, b) => a.age - b.age);
 }
 
