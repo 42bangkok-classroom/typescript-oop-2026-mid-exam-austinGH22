@@ -1,12 +1,8 @@
-import { error } from "console";
-import { Agent } from "http";
-
 interface Person {
   firstName?: string;
   lastName?: string;
   age: number;
 }
-
 
 const persons: Person[] = [
   { firstName: "Somchai", lastName: "Jaidee", age: 30 },
@@ -19,21 +15,11 @@ const persons: Person[] = [
 ];
 
 export function sortPersons(persons: Person[]): Person[] {
-  try{
-  const result = persons
-  .filter(persons => persons.age>0 && persons.age<100) 
-  .filter(persons => persons.age !== null && persons.age !== undefined )
-  .filter(persons => persons.firstName !== null && persons.firstName !== undefined && persons.firstName !== "")
-  .filter(persons => persons.lastName !== null && persons.lastName !== undefined && persons.lastName !== "")
-  .map(persons => ({
-    firstName: persons.firstName ,
-    lastName: persons.lastName ,
-    age: persons.age
-  }))
-  return result.sort((a,b) => a.age - b.age)
-  }catch (error) {
-    throw error
-  }
+  return persons
+    .filter(p => p.age > 0 && p.age < 100)
+    .filter(p => p.firstName && p.firstName.trim() !== "")
+    .filter(p => p.lastName && p.lastName.trim() !== "")
+    .sort((a, b) => a.age - b.age);
 }
 
 console.log(sortPersons(persons))
