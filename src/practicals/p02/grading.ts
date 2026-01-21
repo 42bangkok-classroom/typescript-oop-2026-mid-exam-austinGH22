@@ -1,15 +1,32 @@
 // Write your code below
-// interface Product {
-//     price? : number ;     
-//     }
-// function getprice (P?:Product){
-//     return P.price + 10
-// }
-export ={}
-function greet(X:string)  {
-    if(X){
-        return "hello"
-    }
+import { parseEnv } from "util";
+
+const score1 : string = process.argv[2];
+const grade = Number(score1);
+if(score1 === ''){
+    console.log(`Invalid Input`)
+}
+else if(Number.isNaN(grade)){
+  console.log("Invalid Input");
+}
+else if (grade < 0 || grade > 100){
+  console.log("Invalid Input");
+}
+else
+  if (grade >= 80){
+  console.log("Grade is A");
+}
+else if (grade >= 70 ){
+  console.log("Grade is B");
+}
+else if (grade >= 60){
+  console.log("Grade is C");
+}
+else if (grade >= 50){
+  console.log("Grade is D");
+}
+else if (grade >= 0){
+  console.log("Grade is F");
 }
 
-console.log(greet("a"))
+
