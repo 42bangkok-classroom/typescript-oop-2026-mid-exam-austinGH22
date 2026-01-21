@@ -3,7 +3,7 @@
 import { get } from "http"
 
 function getName(name:string) :string {
-    return `hello ${name}`
+    return `Hello ${name}`
 }
 
-console.log(getName("Austin"))
+console.log(getName("Exam"))
